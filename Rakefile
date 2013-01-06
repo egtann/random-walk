@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "random-walk"
   gem.homepage = "http://github.com/egtann/random-walk"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Simple random-walk generator}
+  gem.description = %Q{Generates an array of random-walk data within user-specified limits and of an arbitrary length for use in testing.}
   gem.email = "egtann@gmail.com"
   gem.authors = ["Evan Tann"]
   # dependencies defined in Gemfile

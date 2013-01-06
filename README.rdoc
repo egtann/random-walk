@@ -1,6 +1,19 @@
 = random-walk
 
-Description goes here.
+This is an extremely simple gem for generating random-walk test data in an array. It's useful for statistics testing, where random data falls short for testing something like simple regression.
+
+The resulting array will always stay within the limits provided (inclusive). The random-walk adds +1, 0, or -1 on each iteration.
+
+## Usage
+
+```ruby
+require 'random-walk'
+
+# RandomWalk.generate(limits, array_length)
+RandomWalk.generate(10..40, 5) # [11, 12, 11, 10, 10]
+RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
+RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
+```
 
 == Contributing to random-walk
  
@@ -16,4 +29,3 @@ Description goes here.
 
 Copyright (c) 2013 Evan Tann. See LICENSE.txt for
 further details.
-
