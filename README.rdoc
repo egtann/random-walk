@@ -2,18 +2,26 @@
 
 This is an extremely simple gem for generating random-walk test data in an array. It's useful for statistics testing, where random data falls short for testing something like simple regression.
 
-The resulting array will always stay within the limits provided (inclusive). The random-walk adds +1, 0, or -1 on each iteration.
+The resulting array will always stay within the range provided (inclusive). The random-walk adds +1, 0, or -1 on each iteration.
 
 ## Usage
 
-```ruby
-require 'random-walk'
+    require 'random-walk'
 
-# RandomWalk.generate(limits, array_length)
-RandomWalk.generate(10..40, 5) # [11, 12, 11, 10, 10]
-RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
-RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
-```
+    # RandomWalk.generate(range, array_length)
+    RandomWalk.generate(10..40, 5) # [11, 12, 11, 10, 10]
+    RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
+    RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
+
+    # generate_vectors(x_range, y_range, vector_length)
+    rw = RandomWalk.new
+    rw.generate_vectors(0..99, 0..1023, 5)
+    rw.x # [78, 79, 80, 81, 81]
+    rw.y # [700, 701, 702, 702, 701]
+
+    # fit_y_to_x(fit_chance)
+    rw.fit_y_to_x(100) # Perfect fit. If x goes up by 1, y goes up by 1
+    rw.fit_y_to_x(50) # 50% chance. If x goes up by 1, y has a 50 percent chance of going up by 1
 
 == Contributing to random-walk
  
