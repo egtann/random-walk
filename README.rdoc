@@ -8,9 +8,10 @@ The resulting array will always stay within the range provided (inclusive). The 
 
     require 'random-walk'
 
-    # RandomWalk.generate(range, array_length)
+    # RandomWalk.generate(range, array_length, step=1)
     RandomWalk.generate(10..40, 5) # [11, 12, 11, 10, 10]
     RandomWalk.generate(10..40, 5) # [27, 28, 29, 30, 29]
+    RandomWalk.generate(10..40, 5, 2) # [34, 36, 36, 38, 36]
 
 == Contributing to random-walk
  
